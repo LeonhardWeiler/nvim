@@ -18,9 +18,11 @@ return require('packer').startup(function(use)
             }
         end
     })
+
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
+    use('github/copilot.vim')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
      use {
