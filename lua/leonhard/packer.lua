@@ -6,15 +6,12 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "Shatur/neovim-ayu", as = "ayu" }
     use({
         "folke/trouble.nvim",
         config = function()
             require("trouble").setup {
                 icons = true,
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
             }
         end
     })
@@ -22,6 +19,9 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
+    use('mattn/emmet-vim')
+    use('jiangmiao/auto-pairs')
+    use('prettier/vim-prettier')
     use('github/copilot.vim')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
