@@ -18,7 +18,11 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
+  use('nvim-tree/nvim-web-devicons')
+  use('lewis6991/gitsigns.nvim')
+  use('lukas-reineke/indent-blankline.nvim')
   use('theprimeagen/harpoon')
+  use('feline-nvim/feline.nvim')
   use('mattn/emmet-vim')
   use {
     "windwp/nvim-autopairs",
