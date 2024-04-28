@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('feline-nvim/feline.nvim')
   use('mattn/emmet-vim')
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
