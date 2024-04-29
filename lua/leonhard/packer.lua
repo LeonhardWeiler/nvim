@@ -6,7 +6,12 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use { "Shatur/neovim-ayu", as = "ayu" }
+  use {
+    'olivercederborg/poimandres.nvim',
+    config = function()
+      require('poimandres').setup {}
+    end
+  }
   use({
     "folke/trouble.nvim",
     config = function()
@@ -20,10 +25,12 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('nvim-tree/nvim-web-devicons')
   use('lewis6991/gitsigns.nvim')
-  use('lukas-reineke/indent-blankline.nvim')
   use('ThePrimeagen/vim-be-good')
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use('theprimeagen/harpoon')
-  use('feline-nvim/feline.nvim')
   use('mattn/emmet-vim')
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   use {

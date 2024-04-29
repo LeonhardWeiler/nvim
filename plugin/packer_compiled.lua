@@ -49,13 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-<<<<<<< HEAD
 local package_path_str = "C:\\Users\\LEONHA~1\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?.lua;C:\\Users\\LEONHA~1\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\LEONHA~1\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\LEONHA~1\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
 local install_cpath_pattern = "C:\\Users\\LEONHA~1\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1703942320\\lib\\lua\\5.1\\?.so"
-=======
-local package_path_str = "C:\\Users\\Lya\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1696883897\\share\\lua\\5.1\\?.lua;C:\\Users\\Lya\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1696883897\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\Lya\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1696883897\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\Lya\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1696883897\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\Lya\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.1696883897\\lib\\lua\\5.1\\?.so"
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -81,174 +76,92 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/L3MON4D3/LuaSnip"
-  },
-  ayu = {
-    loaded = true,
-<<<<<<< HEAD
-    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ayu",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ayu",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
-    url = "https://github.com/Shatur/neovim-ayu"
   },
   ["cmp-buffer"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lua",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["copilot.vim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\copilot.vim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/github/copilot.vim"
   },
   ["emmet-vim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/mattn/emmet-vim"
-  },
-  ["feline.nvim"] = {
-    loaded = true,
-<<<<<<< HEAD
-    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
-    url = "https://github.com/feline-nvim/feline.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   harpoon = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/theprimeagen/harpoon"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-<<<<<<< HEAD
-    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\indent-blankline.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["live-server.nvim"] = {
     commands = { "LiveServer", "LiveServerStart", "LiveServerStop" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\live-server.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\live-server.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/aurum77/live-server.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp-zero.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\markdown-preview.nvim",
+    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
@@ -256,102 +169,64 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-autopairs",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-autopairs",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\playground",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\playground",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["poimandres.nvim"] = {
+    config = { "\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15poimandres\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\poimandres.nvim",
+    url = "https://github.com/olivercederborg/poimandres.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\2\nsetup\ftrouble\frequire\0" },
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/folke/trouble.nvim"
   },
   undotree = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/mbbill/undotree"
   },
   ["vim-be-good"] = {
@@ -361,29 +236,17 @@ _G.packer_plugins = {
   },
   ["vim-fugitive"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-prettier"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-prettier",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-prettier",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/prettier/vim-prettier"
   },
   ["zen-mode.nvim"] = {
     loaded = true,
-<<<<<<< HEAD
     path = "C:\\Users\\LeonhardWeiler\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\zen-mode.nvim",
-=======
-    path = "C:\\Users\\Lya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\zen-mode.nvim",
->>>>>>> ca2eeae42b8485753483b80b134628d8a5f79f98
     url = "https://github.com/folke/zen-mode.nvim"
   }
 }
@@ -397,16 +260,13 @@ time([[Setup for markdown-preview.nvim]], false)
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\2\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+-- Config for: poimandres.nvim
+time([[Config for poimandres.nvim]], true)
+try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15poimandres\frequire\0", "config", "poimandres.nvim")
+time([[Config for poimandres.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
-          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStop', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
-      end})
 pcall(vim.api.nvim_create_user_command, 'LiveServer', function(cmdargs)
           require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServer', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
         end,
@@ -420,6 +280,13 @@ pcall(vim.api.nvim_create_user_command, 'LiveServerStart', function(cmdargs)
         {nargs = '*', range = true, bang = true, complete = function()
           require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
           return vim.fn.getcompletion('LiveServerStart ', 'cmdline')
+      end})
+pcall(vim.api.nvim_create_user_command, 'LiveServerStop', function(cmdargs)
+          require('packer.load')({'live-server.nvim'}, { cmd = 'LiveServerStop', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
+        end,
+        {nargs = '*', range = true, bang = true, complete = function()
+          require('packer.load')({'live-server.nvim'}, {}, _G.packer_plugins)
+          return vim.fn.getcompletion('LiveServerStop ', 'cmdline')
       end})
 time([[Defining lazy-load commands]], false)
 
