@@ -20,7 +20,19 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = {
+      {'filename',
+        file_status = true,
+        newfile_status = true,
+        path = 1,
+        symbols = {
+          modified = '',
+          readonly = '',
+          unnamed = '',
+          newfile= '',
+        }
+      },
+    },
     lualine_x = {"os.date('%c')", 'data', "require'lsp-status'.status()"},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
