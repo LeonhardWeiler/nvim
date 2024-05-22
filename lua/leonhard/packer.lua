@@ -22,10 +22,20 @@ return require('packer').startup(function(use)
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
   use('nvim-treesitter/playground')
-  use('nvim-tree/nvim-web-devicons')
   use('lewis6991/gitsigns.nvim')
+  use('mfussenegger/nvim-dap')
+  use('theHamsta/nvim-dap-virtual-text')
+  use('mxsdev/nvim-dap-vscode-js')
   use('ThePrimeagen/vim-be-good')
+  use {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+  }
+  use('nvim-tree/nvim-web-devicons')
+  use('lervag/vimtex')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }

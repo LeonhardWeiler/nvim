@@ -1,5 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.mouse = ""
 
 vim.opt.linebreak = true
 vim.opt.wrap = true
