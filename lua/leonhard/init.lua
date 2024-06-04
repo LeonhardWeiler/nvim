@@ -29,16 +29,6 @@ autocmd({"BufWritePre"}, {
   command = [[%s/\s\+$//e]],
 })
 
--- This is necessary for VimTeX to load properly.
--- vim.cmd('filetype plugin indent on')
-
--- This enables Vim's and neovim's syntax-related features.
--- vim.cmd('syntax enable')
-
--- vim.g.vimtex_view_general_options = 'file:@pdf\\#src:@line@tex'
-
--- vim.g.maplocalleader = ","
-
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25

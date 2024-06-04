@@ -1,7 +1,6 @@
 local dap = require("dap")
 require("nvim-dap-virtual-text").setup()
 
--- Set keymaps to control the debugger
 vim.keymap.set('n', '<F2>', require 'dap'.restart)
 vim.keymap.set('n', '<F3>', require 'dap'.disconnect)
 vim.keymap.set('n', '<F5>', require 'dap'.continue)

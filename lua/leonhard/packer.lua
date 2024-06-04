@@ -2,86 +2,68 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use {
-    'olivercederborg/poimandres.nvim',
-    config = function()
-      require('poimandres').setup {}
-    end
-  }
-  use({
-    "folke/trouble.nvim",
-    config = function()
-      require("trouble").setup {
-        icons = true,
-      }
-    end
-  })
+  use 'olivercederborg/poimandres.nvim'
+  use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use 'rcarriga/nvim-dap-ui'
+  use 'nvim-treesitter/playground'
+  use 'nvim-neotest/nvim-nio'
+  use 'lewis6991/gitsigns.nvim'
+  use 'mfussenegger/nvim-dap'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'mxsdev/nvim-dap-vscode-js'
+  use 'ThePrimeagen/vim-be-good'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'lervag/vimtex'
+  use 'github/copilot.vim'
+  use 'mbbill/undotree'
+  use 'tpope/vim-fugitive'
+  use 'theprimeagen/harpoon'
+  use 'mattn/emmet-vim'
+  use 'prettier/vim-prettier'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lualine/lualine.nvim'
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-  use('nvim-treesitter/playground')
-  use('lewis6991/gitsigns.nvim')
-  use('mfussenegger/nvim-dap')
-  use('theHamsta/nvim-dap-virtual-text')
-  use('mxsdev/nvim-dap-vscode-js')
-  use('ThePrimeagen/vim-be-good')
   use {
-    "microsoft/vscode-js-debug",
+    'microsoft/vscode-js-debug',
     opt = true,
     run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   }
-  use('nvim-tree/nvim-web-devicons')
-  use('lervag/vimtex')
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use('theprimeagen/harpoon')
-  use('mattn/emmet-vim')
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-  use {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-      require("nvim-autopairs").setup {}
-    end
-  }
-  use('prettier/vim-prettier')
+
   use({
-    "aurum77/live-server.nvim",
+    'iamcco/markdown-preview.nvim',
+    run = "cd app && npm install",
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }
+  })
+
+  use {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter"
+  }
+
+  use({
+    'aurum77/live-server.nvim',
     run = function()
       require"live_server.util".install()
     end,
-    cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+    cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" }
   })
-  use('github/copilot.vim')
-  use('mbbill/undotree')
-  use('tpope/vim-fugitive')
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
     requires = {
-      -- LSP Support
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim'},
       {'williamboman/mason-lspconfig.nvim'},
-
-      -- Autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
       {'hrsh7th/cmp-path'},
       {'saadparwaiz1/cmp_luasnip'},
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
-
-      -- Snippets
       {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
+      {'rafamadriz/friendly-snippets'}
     }
   }
-  use("folke/zen-mode.nvim")
 end)

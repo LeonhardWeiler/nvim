@@ -1,6 +1,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = ""
+vim.cmd.colorscheme "poimandres"
 
 vim.opt.linebreak = true
 vim.opt.wrap = true
