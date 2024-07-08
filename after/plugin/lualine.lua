@@ -1,7 +1,7 @@
 require('lualine').setup {
   options = {
-    icons_enabled = true,
     theme = 'auto',
+    icons_enabled = true,
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {
@@ -21,7 +21,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {
-      {'filename',
+      {'',
         file_status = true,
         newfile_status = true,
         path = 1,
@@ -33,7 +33,7 @@ require('lualine').setup {
         }
       },
     },
-    lualine_x = {"os.date('%c')", 'data', "require'lsp-status'.status()"},
+    lualine_x = {'filename'},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
   },

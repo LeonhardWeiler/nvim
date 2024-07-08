@@ -1,6 +1,7 @@
 require("leonhard.remap")
-require("leonhard.packer")
 require("leonhard.set")
+require("leonhard.colors")
+require("leonhard.packer")
 
 local augroup = vim.api.nvim_create_augroup
 local leonhardGroup = augroup('leonhard', {})

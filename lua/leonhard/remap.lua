@@ -70,3 +70,64 @@ vim.keymap.set("n", "<A-h>", "<C-w>h")
 vim.keymap.set("n", "<A-j>", "<C-w>j")
 vim.keymap.set("n", "<A-k>", "<C-w>k")
 vim.keymap.set("n", "<A-l>", "<C-w>l")
+
+function RemoveNonTexFiles()
+  local cwd = vim.fn.getcwd()
+  local command = 'find ' .. cwd .. ' -type f ! -name "*.tex" -delete'
+  vim.fn.system(command)
+  vim.notify("Removed all non-.tex files in the directory")
+end
+
+vim.api.nvim_set_keymap('n', '<leader>lr', ':lua RemoveNonTexFiles()<CR>', { noremap = true, silent = true })
+
+function RemoveNonTexAndPdfFiles()
+  local cwd = vim.fn.getcwd()
+  local command = 'find ' .. cwd .. ' -type f ! -name "*.tex" ! -name "*.pdf" -delete'
+  os.execute(command .. ' > /dev/null 2>&1')
+  vim.notify("Removed all non-.tex and non-.pdf files in the directory")
+end
+
+vim.api.nvim_set_keymap('n', '<leader>lp', ':lua RemoveNonTexAndPdfFiles()<CR>', { noremap = true, silent = true })
+
+local zathura_pid = nil
+
+function CompileLatex()
+  local filename = vim.fn.expand('%')
+  vim.fn.jobstart('pdflatex ' .. filename, {
+    stdout_buffered = true,
+    stderr_buffered = true,
+    on_stdout = function(_, data)
+    end,
+    on_stderr = function(_, data)
+    end,
+    on_exit = function(_, code)
+      if code == 0 then
+        vim.notify("Compilation finished successfully.")
+      else
+        vim.notify("Compilation failed.", vim.log.levels.ERROR)
+      end
+    end,
+  })
+end
+
+function ToggleZathura()
+  local filename = vim.fn.expand('%:r')
+  if zathura_pid then
+    vim.fn.system('kill ' .. zathura_pid)
+    zathura_pid = nil
+    vim.notify("Closed Zathura")
+  else
+    zathura_pid = tonumber(vim.fn.system('zathura ' .. filename .. '.pdf & echo $!'))
+    vim.notify("Opened Zathura")
+  end
+end
+
+vim.api.nvim_set_keymap('n', '<leader>p', ':lua CompileLatex()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>z', ':lua ToggleZathura()<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd('BufWritePost', {
+  pattern = '*.tex',
+  callback = function()
+    CompileLatex()
+  end,
+})
